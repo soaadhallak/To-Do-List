@@ -1,0 +1,1045 @@
+{
+	"info": {
+		"_postman_id": "648c9778-77b1-4166-80ec-80dda68d7c8c",
+		"name": "TO-DO List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38051441",
+		"_collection_link": "https://fff666-9703.postman.co/workspace/fungo~6f20ba14-48b7-4a5e-831d-770c907597ec/collection/38051441-648c9778-77b1-4166-80ec-80dda68d7c8c?action=share&source=collection_link&creator=38051441"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "register response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "hala",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "roaa@ro.co",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/register?token=73fd483a-e4d5-4299-9f91-8da20031b7be",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"register"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "73fd483a-e4d5-4299-9f91-8da20031b7be"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 21:37:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully.\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXJzL3JlZ2lzdGVyIiwiaWF0IjoxNzQ5MDczMDQyLCJleHAiOjE3NDkwNzY2NDIsIm5iZiI6MTc0OTA3MzA0MiwianRpIjoienVpc1cwZ3M3dkZQeVJSdCIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Ul8BW0Y6pkKZ8CNm4n9AjExLN1_fDS9wdA1jds7o9SI\",\n    \"user\": {\n        \"name\": \"hala\",\n        \"email\": \"roaa@roaa.com\",\n        \"updated_at\": \"2025-06-04T21:37:22.000000Z\",\n        \"created_at\": \"2025-06-04T21:37:22.000000Z\",\n        \"id\": 13\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "login response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "soad@so.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Jun 2025 23:39:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User login successfully.\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3VzZXJzL2xvZ2luIiwiaWF0IjoxNzQ4OTkzOTc0LCJleHAiOjE3NDg5OTc1NzQsIm5iZiI6MTc0ODk5Mzk3NCwianRpIjoiTnJHbVl2Q3VhZUFCam5RMSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ntwqnvmwCuNtm5RBP-Zw8fog6BwbmdESAZlflkGMSCc\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"soad\",\n        \"email\": \"soad@so.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-06-03T23:38:06.000000Z\",\n        \"updated_at\": \"2025-06-03T23:38:06.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "logout response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Jun 2025 23:51:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged out successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "invitation",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "invitation response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "roaa@roaa.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/invite-user",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"invite-user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 21:33:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invitation sent to roaa@roaa.comsuccessfully\",\n    \"token\": \"73fd483a-e4d5-4299-9f91-8da20031b7be\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "index response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 16:11:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"title\": \"Dr.\",\n            \"description\": \"Et ea ut ex unde inventore et perferendis. Et earum nobis in sed. Id dolore distinctio quibusdam eum impedit ut numquam. Pariatur dignissimos consequatur distinctio quo repudiandae.\",\n            \"priority\": \"high\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Ms.\",\n            \"description\": \"Quia deserunt quia reprehenderit neque velit. Sunt maiores ab id accusamus architecto. Sunt deleniti eaque quia nihil impedit non alias. Voluptas illo recusandae facilis fuga cumque.\",\n            \"priority\": \"high\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mr.\",\n            \"description\": \"Aut deserunt ut a eveniet eum. Ea quo sunt velit sint.\",\n            \"priority\": \"high\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Prof.\",\n            \"description\": \"Voluptates natus quod officiis eos neque aut cum rerum. Quia omnis et fuga voluptatum rem dolorum optio voluptatum. Facere sint sit maxime. Fugiat voluptatibus necessitatibus neque et.\",\n            \"priority\": \"high\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Prof.\",\n            \"description\": \"Excepturi eveniet vel quas. At numquam quam asperiores nulla excepturi. Earum voluptas iure rem minus. Aliquid sunt a facere expedita ut laborum quo. Et quia animi ut expedita iste veritatis natus accusantium.\",\n            \"priority\": \"low\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mr.\",\n            \"description\": \"Et quasi nisi voluptates nobis. Velit cum inventore dolores aspernatur rerum. Quod dolor omnis ut quam. Eos qui error porro pariatur veniam.\",\n            \"priority\": \"medium\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mrs.\",\n            \"description\": \"Accusamus quo et nesciunt asperiores occaecati nesciunt. Ducimus perferendis eius asperiores consequatur. Nesciunt eos natus eum temporibus. Enim vitae laboriosam voluptatum.\",\n            \"priority\": \"high\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Dr.\",\n            \"description\": \"Dolor sed ab praesentium minus ea. Accusamus illum voluptas sequi deleniti excepturi quibusdam. Delectus consequatur consequatur quae. Labore quam dolores deserunt dolores ex quis voluptas aut.\",\n            \"priority\": \"high\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Prof.\",\n            \"description\": \"Dolorem architecto dicta illum soluta neque voluptatem accusantium. Nam nisi magni voluptatem aut et sed dignissimos esse. Consequatur quasi voluptatem consequatur quia voluptates at velit dolore. Occaecati iure ipsa voluptatibus voluptatibus nam labore.\",\n            \"priority\": \"medium\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mrs.\",\n            \"description\": \"Ex aliquid rerum provident et. Perspiciatis qui inventore possimus facere temporibus unde iure. Necessitatibus esse tempora qui est non soluta.\",\n            \"priority\": \"medium\",\n            \"category\": \"study\",\n            \"completed\": 0\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"last_page\": 5,\n        \"per_page\": 10,\n        \"total\": 50\n    },\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/todo?page=5\",\n        \"next\": \"http://127.0.0.1:8000/api/todo?page=2\",\n        \"prev\": null\n    },\n    \"message\": \"give all todos successfully\"\n}"
+						},
+						{
+							"name": "index for owner response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 16:20:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"title\": \"Mr.\",\n            \"description\": \"Et quasi nisi voluptates nobis. Velit cum inventore dolores aspernatur rerum. Quod dolor omnis ut quam. Eos qui error porro pariatur veniam.\",\n            \"priority\": \"medium\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mrs.\",\n            \"description\": \"Ex aliquid rerum provident et. Perspiciatis qui inventore possimus facere temporibus unde iure. Necessitatibus esse tempora qui est non soluta.\",\n            \"priority\": \"medium\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Dr.\",\n            \"description\": \"Explicabo molestiae aut magnam suscipit deleniti ut. Omnis quia facere quo aut. Mollitia nam corporis quo tempore enim qui occaecati quas. Suscipit a fugit quaerat nulla omnis voluptas similique laborum.\",\n            \"priority\": \"high\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Mrs.\",\n            \"description\": \"Sapiente velit et rerum. Eum consequatur repellendus ex. Aut est et iste et magni quas.\",\n            \"priority\": \"high\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Dr.\",\n            \"description\": \"Qui velit quod facere explicabo. Deleniti reiciendis blanditiis molestiae. Officiis delectus sunt vel. Aut temporibus aut quam quam numquam odio eum.\",\n            \"priority\": \"high\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Dr.\",\n            \"description\": \"Impedit libero debitis excepturi voluptates. Dicta sunt omnis nam corporis repudiandae commodi commodi ex. Corporis rerum illum placeat molestiae. Dolorem molestias delectus quas illum cupiditate quo deleniti tempora.\",\n            \"priority\": \"low\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Illum corporis molestiae reprehenderit magnam harum ipsum veritatis tempora. Ut omnis ut inventore labore. Exercitationem laudantium porro voluptatem. Excepturi et ad qui.\",\n            \"priority\": \"medium\",\n            \"category\": \"work\",\n            \"completed\": 0\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 7\n    },\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"next\": null,\n        \"prev\": null\n    },\n    \"message\": \"give all todos successfully\"\n}"
+						},
+						{
+							"name": "index with search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo?search=Miss",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Miss"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jun 2025 14:15:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Vel facilis quae ut omnis dolorem magnam. Cumque repellat libero aut dicta. Iure aut vitae voluptatem voluptas ut nihil sit. Amet aliquam cupiditate suscipit non maiores dolorum dolore.\",\n            \"priority\": \"high\",\n            \"category\": \"study\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Velit a et iste laudantium architecto quidem. Atque omnis et voluptatem soluta ducimus ullam a provident. Laudantium inventore libero atque voluptas sed.\",\n            \"priority\": \"low\",\n            \"category\": \"work\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Sunt accusantium at quis saepe deserunt cupiditate doloremque. Est dolor est quas suscipit aut. Ut rem sint beatae doloribus. Quo dignissimos dolorem iure ducimus.\",\n            \"priority\": \"medium\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Temporibus veritatis iusto incidunt praesentium quo quam rem. Iure ducimus quis et sed quia est corrupti. Et qui voluptatem accusantium aut dolorem deserunt debitis in.\",\n            \"priority\": \"high\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 4\n    },\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"next\": null,\n        \"prev\": null\n    },\n    \"message\": \"get all todos successfully\"\n}"
+						},
+						{
+							"name": "index with search and filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo?search=Miss&&categoryId=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Miss"
+										},
+										{
+											"key": null,
+											"value": null
+										},
+										{
+											"key": "categoryId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jun 2025 14:17:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Sunt accusantium at quis saepe deserunt cupiditate doloremque. Est dolor est quas suscipit aut. Ut rem sint beatae doloribus. Quo dignissimos dolorem iure ducimus.\",\n            \"priority\": \"medium\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        },\n        {\n            \"title\": \"Miss\",\n            \"description\": \"Temporibus veritatis iusto incidunt praesentium quo quam rem. Iure ducimus quis et sed quia est corrupti. Et qui voluptatem accusantium aut dolorem deserunt debitis in.\",\n            \"priority\": \"high\",\n            \"category\": \"personal\",\n            \"completed\": 0\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 2\n    },\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/todo?page=1\",\n        \"next\": null,\n        \"prev\": null\n    },\n    \"message\": \"get all todos successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "store response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "priority_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 16:23:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"priority\": \"medium\",\n        \"category\": \"personal\",\n        \"completed\": null\n    },\n    \"message\": \"created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "update response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "tit",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 16:25:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Prof.\",\n        \"description\": \"Aut quod ut ut consequatur quos. Repellendus porro qui quia voluptatum enim quaerat totam. Autem saepe veniam in aut sed culpa sed. Et laudantium amet distinctio dignissimos delectus dolorem.\",\n        \"priority\": \"medium\",\n        \"category\": \"study\",\n        \"completed\": 0\n    },\n    \"message\": \"updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Jun 2025 16:27:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "completed task",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "completed task",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/51/completed",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"51",
+										"completed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jun 2025 14:20:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"todo completion status updated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "show response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/todo/51",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"todo",
+										"51"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jun 2025 14:25:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"title\",\n        \"description\": \"description\",\n        \"priority\": \"medium\",\n        \"category\": \"personal\",\n        \"completed\": 1\n    },\n    \"message\": \"showed successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

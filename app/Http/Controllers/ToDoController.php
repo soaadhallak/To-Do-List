@@ -101,7 +101,7 @@ class ToDoController extends Controller
     
     public function Completed(Todo $todo){
 
-        $this->authorize('update',$todo);
+       
         $todo->is_completed = !$todo->is_completed;
         $todo->save();
         return response()->json(['message'=>'todo completion status updated'],200);
