@@ -55,7 +55,7 @@ RESTful API to manage personal and team tasks with roles, filtering, search, and
   Login:
   POST /api/login
    {
-     "email": "owner@uw.com", "password": "123456" 
+     "email": "owner@ow.com", "password": "123456" 
     } 
   Requires token for protected routes:
   Authorization: Bearer <JWT> 
@@ -77,7 +77,6 @@ RESTful API to manage personal and team tasks with roles, filtering, search, and
      "token": "<token-from-email>"
     } 
 
-    ---
 
    ##  API Endpoints
 
