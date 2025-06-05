@@ -1,35 +1,101 @@
-# 📝 To-Do List API with Laravel
+# ToDo List API With Laravel
 
-A robust task management system with role-based access control (Owner/Guest), invitation system, and advanced features.
+RESTful API to manage personal and team tasks with roles, filtering, search, and invitation system.
 
-## 🚀 Features
+---
 
-- User Roles:
-  - Owner: Full permissions (CRUD tasks, invite users)
-  - Guest: Read-only access (view tasks only)
-  
-- Core Functionalities:
-  - ✉️ Invitation-only registration
-  - ✅ Task CRUD operations
-  - 🔍 Filtering/Searching (by priority, category)
-  - 📖 Pagination
-  - 🏷️ Task categorization (priority, category)
+## Features
 
-- Technical Stack:
-  - Laravel 10
-  - PostgreSQL/SQLite
-  - JWT Authentication
-  - Repository Pattern
-  - Docker Support
+- User authentication with JWT
+- Role-based access (owner & guest)
+- Task CRUD (create, read, update, delete)
+- Search, filter, and categorize todos
+- Invite users to the platform via email
+- Toggle task completion status
 
-## 🔧 Installation
+---
 
-### Prerequisites
-- PHP 8.2+
-- Composer
-- Docker (optional)
+## Tech Stack
 
-### Steps
-1. Clone repo:
+- Laravel 12
+- MySQL
+- JWT (php-open-source-saver/jwt-auth)
+- Laravel Mailer (Gmail SMTP)
+
+---
+
+## Installation
+
+1. Clone the project:
    `bash
-   git clone https://github.com/yourusername/todo-api.git
+   git clone https://github.com/soaadhallak/To-Do-List.git
+   cd To-Do-List
+
+2. Install dependencies:
+    composer install 
+
+3. Copy .env file:
+    cp .env.example .env
+
+4. Generate app key:
+   php artisan key:generate 
+
+5. Configure database and mail settings in .env
+
+6. Run migrations and seeders:
+   php artisan migrate --seed 
+
+7. Serve the app:
+   php artisan serve 
+
+   ----
+
+  ## Authentication 
+
+  Login:
+  POST /api/login
+   {
+     "email": "owner@uw.com", "password": "123456" 
+    } 
+  Requires token for protected routes:
+  Authorization: Bearer <JWT> 
+
+  ---
+
+  ## User Invitation Flow
+
+  Owner sends invitation:
+  POST /api/invite-user
+   { "email": "newuser@example.com" 
+   } 
+  Email is sent with a registration link.
+  Guest registers using the token:
+  POST /api/users/register
+   {
+     "name": "Soad",
+     "password": "123456",
+     "token": "<token-from-email>"
+    } 
+
+    ---
+
+   ##  API Endpoints
+
+| Method | Endpoint                  | Description                          | Parameters                          | Access     |
+|--------|---------------------------|--------------------------------------|-------------------------------------|------------|
+| POST | /api/users/register      | Register via invitation token       | token, email, password , name       | Public     |
+| POST | /api/users/login         | Login to get JWT token               | email, password                 | Public     |
+| POST | /api/invite-user       | invite new user (Owner only)     | email                             | Owner      |
+| GET  | /api/todo              | Get all tasks (with search,filter,paginated)            | ?page=1, ?priority=high         | All Users  |
+| POST | /api/todo             | Create new task                      | title, priority, category     | Owner      |
+| PUT  | /api/todo/{todo}/completed| Mark task as completed               |                                         | All Users     | 
+| GET  | /api/todo/{todo}             | show single task           |                                 | All Users  |
+| POST | /api/todo/{todo}             | update task                |                                     | Owner      |
+| delete | /api/todo/{todo}             | delete task                |                                     | Owner      |
+
+  ---
+
+  ## Filtering Example
+
+  GET /api/todos?search=math&priorityId=2&categoryId=3&page=1 
+
