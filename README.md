@@ -84,6 +84,7 @@ RESTful API to manage personal and team tasks with roles, filtering, search, and
 |--------|---------------------------|--------------------------------------|-------------------------------------|------------|
 | POST | /api/users/register      | Register via invitation token       | token, email, password , name       | Public     |
 | POST | /api/users/login         | Login to get JWT token               | email, password                 | Public     |
+| POST | /api/users/logout     |                                                 | Public     |
 | POST | /api/invite-user       | invite new user (Owner only)     | email                             | Owner      |
 | GET  | /api/todo              | Get all tasks (with search,filter,paginated)            | ?page=1, ?priority=high         | All Users  |
 | POST | /api/todo             | Create new task                      | title, priority, category     | Owner      |
