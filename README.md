@@ -1,8 +1,6 @@
 # ToDo List API With Laravel
 
 RESTful API to manage personal and team tasks with roles, filtering, search, and invitation system.
-Here I do Changes to test
-
 ---
 
 ## Features
