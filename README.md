@@ -100,6 +100,6 @@ RESTful API to manage personal and team tasks with roles, filtering, search, and
   GET /api/todos?search=math&priorityId=2&categoryId=3&page=1 
 
 
- ## Download the Postman Collection to test the API:  
+ ## Download the Postman Collection to test the API :  
   [To-Do List.postman_collection.json]
 
